@@ -1,10 +1,12 @@
-﻿namespace FileUpload01.Models
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-    public partial class Image
+namespace FileUpload01.Models
+{
+    [Table("Uploads")]
+    public partial class File
     {
+        [Key]
         public int Id { get; set; }
         public string ImagePath { get; set; }
 
